@@ -5,6 +5,14 @@ import { defineConfig } from '#q-app/wrappers'
 
 export default defineConfig((ctx) => {
   return {
+     framework: {
+      // ... ตั้งค่า framework อื่นๆ ถ้ามี
+      plugins: [
+        'Notify'
+        // หากมี plugins อื่นๆ อยู่แล้ว ก็ใส่เพิ่มไปใน array นี้ได้เลย
+        // เช่น 'Dialog', 'Loading', ฯลฯ
+      ]
+  }
     // https://v2.quasar.dev/quasar-cli-webpack/prefetch-feature
     // preFetch: true,
 
@@ -207,10 +215,3 @@ export default defineConfig((ctx) => {
     }
   }
 })
-return {
-  framework: {
-    plugins: [
-      'Notify'
-    ],
-  }
-}
